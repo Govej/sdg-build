@@ -56,7 +56,7 @@ class InputSdmxMl_Structure(InputSdmx):
         series : Element
             The XML element for the Series
         """
-        return series.find(".//Series/SeriesKey/Value[@id='SERIES']").attrib['value']
+        return series
 
 
     def get_series_disaggregations(self, series):
