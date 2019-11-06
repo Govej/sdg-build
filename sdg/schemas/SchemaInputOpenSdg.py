@@ -99,7 +99,7 @@ class SchemaInputOpenSdg(SchemaInputBase):
         elif el == 'select' or el == 'multiselect':
             any_of = []
             for prose_option in prose_field['options']:
-                if 'translation_key' not in prose_option:
+                if 'translation_key' not in prose_field['options']:
                     prose_option['translation_key'] = prose_option['name']
                 jsonschema_option = {
                     'type': 'string',
